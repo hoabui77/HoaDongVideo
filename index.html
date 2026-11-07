@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Xưởng Làm Phim Kỷ Niệm - Ms. Hoà Đồng | Có Lời Bình & Phụ Đề</title>
-  <meta name="description" content="Ứng dụng làm phim video kỷ niệm có lời bình thuyết minh và chữ phụ đề to rõ dành riêng cho Ms. Hoà Đồng (1972). Chọn ảnh/video từ điện thoại và máy tính dễ dàng." />
+  <title>Xưởng Làm Phim Thông Minh AI - Ms. Hoà Đồng | Đa Chức Năng & Tự Tối Ưu</title>
+  <meta name="description" content="Ứng dụng làm phim video kỷ niệm tích hợp AI API Key tự học và tối ưu dành riêng cho Ms. Hoà Đồng (1972). Đầy đủ lời bình, phụ đề, thơ lục bát, bộ lọc màu và xuất video." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -17,12 +17,15 @@
       <div class="brand-area">
         <div class="brand-badge">🎬</div>
         <div class="brand-title">
-          <h1>Xưởng Phim Kỷ Niệm Ms. Hoà Đồng</h1>
-          <p>Ghép Ảnh & Video • Tự Động Đọc Lời Bình • Chạy Chữ Phụ Đề Rõ Nét</p>
+          <h1>Xưởng Phim Thông Minh AI • Ms. Hoà Đồng</h1>
+          <p>Ghép Ảnh & Video Đa Chức Năng • Tích Hợp AI API Key Học & Tự Tối Ưu • Lời Bình & Phụ Đề</p>
         </div>
       </div>
 
       <div class="header-actions">
+        <a href="#ai-hub" class="header-link ai-pill">
+          <span>🤖 Trung Tâm AI & API Key</span>
+        </a>
         <a href="https://hoabui77.github.io/HoaDong/" class="header-link">
           <span>🌸 Về Trang Chủ Hoà Đồng</span>
         </a>
@@ -33,44 +36,67 @@
     </div>
   </header>
 
-  <!-- 3 Simple Steps Banner -->
-  <section class="guide-banner" aria-label="Hướng dẫn 3 bước">
-    <div class="guide-steps">
-      <div class="guide-step">
-        <div class="step-num">1</div>
-        <div class="step-text">
-          <strong>Chọn Ảnh & Video</strong>
-          <span>Từ Điện thoại hoặc Máy tính của cô</span>
+  <!-- AI Brain & API Key Self-Learning Hub -->
+  <section id="ai-hub" class="ai-hub-section" aria-label="Trung tâm Trí tuệ nhân tạo AI">
+    <div class="ai-hub-card">
+      <div class="ai-hub-header">
+        <div class="ai-hub-title">
+          <span style="font-size: 2rem;">🧠</span>
+          <div>
+            <h2>Trung Tâm Trí Tuệ Nhân Tạo AI (Tự Học & Tối Ưu Theo Sở Thích Cô Hoà Đồng)</h2>
+            <p style="font-size: 0.94rem; color: var(--text-sub);">
+              Nhập <strong>Google Gemini API Key</strong> hoặc <strong>OpenAI API Key</strong> để AI nhìn trực tiếp bức ảnh của cô, tự sáng tác lời bình, làm thơ lục bát và tự học thói quen sử dụng của cô.
+            </p>
+          </div>
         </div>
+        <span id="ai-status-pill" class="ai-status-pill">
+          ✨ Chế độ AI Thông Minh Tích Hợp Sẵn
+        </span>
       </div>
 
-      <div class="guide-step">
-        <div class="step-num">2</div>
-        <div class="step-text">
-          <strong>Tạo Lời Bình & Phụ Đề</strong>
-          <span>Chọn mẫu có sẵn, gõ chữ hoặc thu âm giọng cô</span>
+      <div class="ai-key-grid">
+        <div class="field-box">
+          <label for="ai-provider-select">🤖 Chọn Nền Tảng AI</label>
+          <select id="ai-provider-select">
+            <option value="gemini" selected>Google Gemini AI (Khuyên dùng - Hỗ trợ nhìn ảnh)</option>
+            <option value="openai">OpenAI ChatGPT (GPT-4o)</option>
+          </select>
         </div>
+
+        <div class="field-box">
+          <label for="ai-api-key-input">🔑 Nhập AI API Key Của Cô (Lưu bảo mật ngay trên trình duyệt máy cô)</label>
+          <input
+            type="password"
+            id="ai-api-key-input"
+            placeholder="Dán mã API Key (ví dụ: AIzaSy... hoặc sk-...) vào đây..."
+          />
+        </div>
+
+        <button type="button" id="save-ai-key-btn" class="big-btn btn-ai">
+          <span>💾 Lưu & Kết Nối AI</span>
+        </button>
+
+        <button type="button" id="ai-optimize-app-btn" class="big-btn btn-secondary">
+          <span>⚡ AI Tự Tối Ưu Toàn Bộ Phim</span>
+        </button>
       </div>
 
-      <div class="guide-step">
-        <div class="step-num">3</div>
-        <div class="step-text">
-          <strong>Xem Phim & Tải Về Máy</strong>
-          <span>Bấm 1 nút để lưu video gửi Zalo / Facebook</span>
-        </div>
+      <div class="ai-memory-bar">
+        <strong>📊 Hồ sơ AI đã học từ thói quen của cô Ms. Hoà Đồng (1972):</strong>
+        <div id="memory-badges" class="memory-badges"></div>
       </div>
     </div>
   </section>
 
   <!-- Main Studio Grid -->
   <main class="studio-container">
-    <!-- Left Column: Cinema Preview Screen & Export -->
+    <!-- Left Column: Cinema Preview Screen, Multi-Format & Export -->
     <div class="player-card">
       <div class="card-heading">
-        <h2>📺 Màn Hình Chiếu Phim Kỷ Niệm</h2>
-        <span style="font-size: 0.92rem; color: var(--text-sub); font-weight: 600;">
-          Chuẩn HD (1280 × 720)
-        </span>
+        <h2>📺 Màn Hình Chiếu Phim Đa Chức Năng</h2>
+        <button type="button" id="save-project-btn" class="chip-btn">
+          💾 Lưu Kịch Bản Đang Làm
+        </button>
       </div>
 
       <div class="canvas-wrapper">
@@ -80,14 +106,22 @@
         <canvas id="movie-canvas" width="1280" height="720"></canvas>
       </div>
 
-      <!-- Main Action Buttons -->
+      <!-- Main Action Buttons (4 Versatile Actions) -->
       <div class="player-controls">
         <button id="play-movie-btn" type="button" class="big-btn btn-play">
           <span>▶️ Xem Thử Bộ Phim</span>
         </button>
 
         <button id="export-movie-btn" type="button" class="big-btn btn-export">
-          <span>💾 Xuất & Tải Phim Về Máy</span>
+          <span>💾 Xuất & Tải Video Về Máy</span>
+        </button>
+
+        <button id="snapshot-btn" type="button" class="big-btn btn-secondary">
+          <span>🖼️ Lưu Cảnh Này Thành Thiệp Ảnh</span>
+        </button>
+
+        <button id="camera-capture-btn" type="button" class="big-btn btn-voice">
+          <span>📸 Chụp Ảnh Trực Tiếp Từ Camera</span>
         </button>
       </div>
 
@@ -97,7 +131,7 @@
           🎉 Bộ phim của cô Hoà đã quay xong!
         </strong>
         <p style="font-size: 0.95rem; color: #047857;">
-          Cô bấm vào nút bên dưới để lưu file Video về Điện thoại / Máy tính và gửi tặng bạn bè qua Zalo hoặc đăng Facebook nhé:
+          Cô bấm vào nút bên dưới để lưu file Video về Điện thoại / Máy tính và gửi tặng bạn bè qua Zalo hoặc đăng Facebook, YouTube nhé:
         </p>
         <a
           id="download-video-link"
@@ -110,25 +144,59 @@
         </a>
       </div>
 
-      <!-- Overall Movie Settings -->
+      <!-- Rich Movie Settings -->
       <div class="movie-settings">
-        <div class="field-box">
-          <label for="movie-title-input">🏷️ Tên Bộ Phim (Hiển thị góc trên màn hình)</label>
-          <input
-            type="text"
-            id="movie-title-input"
-            value="Hoà Đồng Cuộc Sống Tươi Đẹp"
-            placeholder="Nhập tên bộ phim kỷ niệm..."
-          />
+        <div class="setting-row">
+          <div class="field-box">
+            <label for="movie-title-input">🏷️ Tên Bộ Phim (Góc trên màn hình)</label>
+            <input
+              type="text"
+              id="movie-title-input"
+              value="Hoà Đồng Cuộc Sống Tươi Đẹp"
+              placeholder="Nhập tên bộ phim..."
+            />
+          </div>
+
+          <div class="field-box">
+            <label for="aspect-ratio-select">📐 Tỷ Lệ Khung Hình</label>
+            <select id="aspect-ratio-select">
+              <option value="16:9" selected>16:9 Ngang (YouTube / Tivi / Máy tính)</option>
+              <option value="9:16">9:16 Dọc (Điện thoại / Zalo / TikTok)</option>
+              <option value="1:1">1:1 Vuông (Đăng Facebook / Thiệp Kỷ Niệm)</option>
+            </select>
+          </div>
         </div>
 
         <div class="setting-row">
           <div class="field-box">
-            <label for="bg-music-select">🎶 Nhạc Nền Tự Động</label>
+            <label for="opening-title-input">🎬 Dòng Chữ Mở Đầu Phim</label>
+            <input
+              type="text"
+              id="opening-title-input"
+              value="Kỷ Niệm Thanh Xuân & Tình Thân Ái"
+              placeholder="Ví dụ: Kính tặng các chị em đồng nghiệp..."
+            />
+          </div>
+
+          <div class="field-box">
+            <label for="ending-credit-input">💖 Lời Chúc Kết Phim</label>
+            <input
+              type="text"
+              id="ending-credit-input"
+              value="Thực hiện: Ms. Hoà Đồng • ĐT: 0983.507.192"
+              placeholder="Ví dụ: Chúc mọi người luôn vui khoẻ..."
+            />
+          </div>
+        </div>
+
+        <div class="setting-row">
+          <div class="field-box">
+            <label for="bg-music-select">🎶 Kho Nhạc Nền Đa Dạng</label>
             <select id="bg-music-select">
               <option value="quehuong" selected>Nhạc Quê Hương Êm Dịu (Mặc định)</option>
               <option value="muaxuan">Giai Điệu Mùa Xuân Tươi Vui</option>
               <option value="kyniem">Khúc Nhạc Kỷ Niệm Sâu Lắng</option>
+              <option value="binhyen">Nhạc Thiền & Trà Đạo Bình Yên</option>
               <option value="custom">📂 Tải nhạc MP3 từ máy của cô lên...</option>
               <option value="none">🔇 Tắt nhạc nền</option>
             </select>
@@ -136,11 +204,13 @@
           </div>
 
           <div class="field-box">
-            <label for="frame-style-select">🌸 Khung Viền & Hiệu Ứng</label>
+            <label for="frame-style-select">🌸 Khung Viền & Hiệu Ứng Bay</label>
             <select id="frame-style-select">
               <option value="hoadao" selected>Cánh Hoa Đào Rơi & Viền Hồng</option>
+              <option value="hoasen">Cánh Hoa Sen Hồng Thanh Tao</option>
               <option value="kinhdoanh">Ánh Sao Vàng & Khung Vàng Sang Trọng</option>
-              <option value="thanhlich">Khung Trắng Thanh Lịch</option>
+              <option value="traitim">Trái Tim Yêu Thương Bay Nhẹ</option>
+              <option value="thanhlich">Khung Trắng Tối Giản Thanh Lịch</option>
             </select>
           </div>
         </div>
@@ -161,13 +231,14 @@
               <option value="#fff3b0" selected>Vàng Nắng Ấm (Nổi bật nhất)</option>
               <option value="#ffffff">Trắng Tinh Khôi</option>
               <option value="#ffc2d1">Hồng Phấn Dịu Dàng</option>
+              <option value="#a7f3d0">Xanh Ngọc Mát Mắt</option>
             </select>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Right Column: Media Picker & Per-Slide Narration/Subtitle Editor -->
+    <!-- Right Column: Media Picker, AI Scriptwriter & Per-Slide Editor -->
     <div class="editor-column">
       <!-- 1. Add Photos & Videos -->
       <div class="panel-card">
@@ -179,7 +250,7 @@
           <span class="upload-icon">➕🖼️🎥</span>
           <h3>Bấm Vào Đây Để Chọn Ảnh Hoặc Video Của Cô</h3>
           <p>
-            Có thể chọn 1 hoặc nhiều bức ảnh, video từ Điện thoại hoặc Máy tính cùng lúc
+            Có thể chọn nhiều ảnh/video cùng lúc. Dùng nút ◀ ▶ ➕ ✕ trên từng ảnh để sắp xếp thứ tự hoặc nhân đôi cảnh.
           </p>
           <input
             type="file"
@@ -190,30 +261,64 @@
           />
         </div>
 
-        <div style="margin-top: 16px;">
-          <strong style="font-size: 1rem; color: var(--text-sub);">
-            🎞️ Danh sách các cảnh trong phim (Bấm vào từng ảnh để sửa lời bình):
+        <div style="margin-top: 14px;">
+          <strong style="font-size: 0.98rem; color: var(--text-sub);">
+            🎞️ Danh sách các cảnh trong phim (Bấm vào từng ảnh để sửa lời bình & hiệu ứng):
           </strong>
           <div id="slides-strip" class="slides-strip"></div>
         </div>
       </div>
 
-      <!-- 2. Edit Subtitle & Voice Narration for Selected Slide -->
+      <!-- 2. AI Script & Poem Assistant Card -->
+      <div class="panel-card ai-card">
+        <div class="card-heading">
+          <h2 style="color: var(--ai-purple);">✨ Trợ Lý AI Sáng Tác Lời Bình & Thơ Cho Cảnh Này</h2>
+        </div>
+
+        <div class="field-box" style="margin-bottom: 12px;">
+          <label for="ai-custom-topic">💡 Nhập gợi ý ngắn cho AI (Không bắt buộc):</label>
+          <input
+            type="text"
+            id="ai-custom-topic"
+            placeholder="Ví dụ: Chuyến du xuân Hàn Quốc, Kỷ niệm họp lớp, Ngày Nhà giáo 20/11..."
+          />
+        </div>
+
+        <div class="voice-tools-grid">
+          <button type="button" id="ai-analyze-photo-btn" class="big-btn btn-ai">
+            <span>👁️ AI Nhìn Ảnh & Tự Viết Lời Bình</span>
+          </button>
+
+          <button type="button" id="ai-rewrite-btn" class="big-btn btn-ai">
+            <span>✍️ AI Trau Chuốt Câu Văn Hay Hơn</span>
+          </button>
+
+          <button type="button" id="ai-poem-btn" class="big-btn btn-ai">
+            <span>📜 AI Sáng Tác Thơ 4 Câu Cho Ảnh</span>
+          </button>
+
+          <button type="button" id="ai-all-slides-btn" class="big-btn btn-secondary">
+            <span>🪄 AI Viết Lời Bình Cho Toàn Bộ Phim</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- 3. Edit Subtitle, Motion, Filter & Voice Narration for Selected Slide -->
       <div class="panel-card">
         <div class="card-heading">
-          <h2>📝 Bước 2: Lời Bình & Phụ Đề Cho Từng Cảnh</h2>
+          <h2>📝 Bước 2: Lời Bình, Hiệu Ứng & Giọng Đọc Từng Cảnh</h2>
           <span
             id="active-slide-label"
-            style="background: var(--bg-accent-soft); color: var(--primary); padding: 6px 14px; border-radius: 99px; font-weight: 700; font-size: 0.95rem;"
+            style="background: var(--bg-accent-soft); color: var(--primary); padding: 6px 14px; border-radius: 99px; font-weight: 700; font-size: 0.94rem;"
           >
             Đang chỉnh sửa: Cảnh số 1
           </span>
         </div>
 
         <!-- Quick Sample Quotes -->
-        <div style="margin-bottom: 16px;">
-          <label style="font-weight: 700; font-size: 0.96rem; display: block;">
-            💡 Chọn nhanh lời bình mẫu giàu cảm xúc (Chỉ cần bấm 1 chạm):
+        <div style="margin-bottom: 14px;">
+          <label style="font-weight: 700; font-size: 0.95rem; display: block;">
+            🌸 Kho lời bình & thơ mẫu có sẵn (Bấm 1 chạm):
           </label>
           <div class="preset-chips">
             <button type="button" class="chip-btn" data-preset="dongnghiep">
@@ -228,24 +333,51 @@
             <button type="button" class="chip-btn" data-preset="cuocsong">
               ☀️ Sống Vui Khoẻ & Hoà Đồng
             </button>
+            <button type="button" class="chip-btn ai-chip" data-preset="tho4cau">
+              📜 Thơ 4 Câu Mùa Xuân & Áo Dài
+            </button>
           </div>
         </div>
 
         <!-- Subtitle Textarea -->
-        <div class="field-box" style="margin-bottom: 16px;">
+        <div class="field-box" style="margin-bottom: 14px;">
           <label for="slide-caption">
             ✍️ Nội dung chữ phụ đề & lời bình của cảnh này:
           </label>
           <textarea
             id="slide-caption"
             rows="3"
-            placeholder="Nhập lời bình hoặc bấm các nút bên dưới để nói trực tiếp..."
+            placeholder="Nhập lời bình, dùng nút AI ở trên, hoặc bấm nút nói vào micro bên dưới..."
           ></textarea>
         </div>
 
+        <!-- Per-Slide Visual Effects (Motion & Color Filter) -->
+        <div class="setting-row" style="margin-bottom: 16px;">
+          <div class="field-box">
+            <label for="slide-motion-select">🎞️ Hiệu Ứng Chuyển Động Ảnh</label>
+            <select id="slide-motion-select">
+              <option value="zoomIn" selected>Phóng To Nhẹ Tâm Điểm (Ken Burns)</option>
+              <option value="zoomOut">Thu Nhỏ Toàn Cảnh</option>
+              <option value="panLeftRight">Lướt Ngang Điện Ảnh (Trái sang Phải)</option>
+              <option value="panBottomTop">Lướt Dọc Từ Dưới Lên</option>
+            </select>
+          </div>
+
+          <div class="field-box">
+            <label for="slide-filter-select">🎨 Bộ Lọc Màu Sắc Cảnh Này</label>
+            <select id="slide-filter-select">
+              <option value="warm" selected>Nắng Ấm Hồng Hào (Tôn da & tươi tắn)</option>
+              <option value="vibrant">Rực Rỡ Sắc Xuân (Nổi bật tà áo dài)</option>
+              <option value="dreamy">Mơ Màng Dịu Nhẹ</option>
+              <option value="vintage">Hoài Niệm Xưa (Màu phim kỷ niệm)</option>
+              <option value="normal">Màu Gốc Nguyên Bản</option>
+            </select>
+          </div>
+        </div>
+
         <!-- Voice & Audio Controls -->
-        <label style="font-weight: 700; font-size: 0.96rem; display: block;">
-          🎙️ Công cụ Giọng Đọc & Thu Âm (Phục vụ cô Hoà thuận tiện nhất):
+        <label style="font-weight: 700; font-size: 0.95rem; display: block;">
+          🎙️ Công cụ Giọng Đọc & Thu Âm:
         </label>
 
         <div class="voice-tools-grid">
@@ -282,19 +414,28 @@
           </button>
         </div>
 
-        <!-- Duration & Speed -->
-        <div class="setting-row" style="margin-top: 18px;">
+        <!-- Duration, Speed & Pitch -->
+        <div class="setting-row-3" style="margin-top: 16px;">
           <div class="field-box">
-            <label for="slide-duration">⏱️ Thời gian chiếu cảnh này (Giây)</label>
-            <input type="number" id="slide-duration" min="3" max="30" value="7" />
+            <label for="slide-duration">⏱️ Thời gian chiếu (Giây)</label>
+            <input type="number" id="slide-duration" min="3" max="35" value="7" />
           </div>
 
           <div class="field-box">
-            <label for="voice-speed">🗣️ Tốc độ giọng đọc tự động</label>
+            <label for="voice-speed">🗣️ Tốc độ giọng đọc</label>
             <select id="voice-speed">
               <option value="0.85">Chậm rãi, truyền cảm (0.85x)</option>
               <option value="0.95" selected>Vừa phải, tự nhiên (0.95x)</option>
               <option value="1.05">Nhanh vui tươi (1.05x)</option>
+            </select>
+          </div>
+
+          <div class="field-box">
+            <label for="voice-pitch">🎵 Âm sắc giọng đọc</label>
+            <select id="voice-pitch">
+              <option value="0.95">Trầm ấm, sâu lắng</option>
+              <option value="1.05" selected>Thanh lịch, dịu dàng</option>
+              <option value="1.15">Trong trẻo, tươi vui</option>
             </select>
           </div>
         </div>
