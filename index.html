@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Xưởng Làm Phim Kỷ Niệm - Ms. Hoà Đồng | Có Lời Bình & Phụ Đề</title>
+  <meta name="description" content="Ứng dụng làm phim video kỷ niệm có lời bình thuyết minh và chữ phụ đề to rõ dành riêng cho Ms. Hoà Đồng (1972). Chọn ảnh/video từ điện thoại và máy tính dễ dàng." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="video-studio.css" />
+</head>
+<body>
+  <!-- Top Header -->
+  <header class="app-header">
+    <div class="header-inner">
+      <div class="brand-area">
+        <div class="brand-badge">🎬</div>
+        <div class="brand-title">
+          <h1>Xưởng Phim Kỷ Niệm Ms. Hoà Đồng</h1>
+          <p>Ghép Ảnh & Video • Tự Động Đọc Lời Bình • Chạy Chữ Phụ Đề Rõ Nét</p>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <a href="https://hoabui77.github.io/HoaDong/" class="header-link">
+          <span>🌸 Về Trang Chủ Hoà Đồng</span>
+        </a>
+        <a href="tel:0983507192" class="header-link">
+          <span>📞 0983.507.192</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 3 Simple Steps Banner -->
+  <section class="guide-banner" aria-label="Hướng dẫn 3 bước">
+    <div class="guide-steps">
+      <div class="guide-step">
+        <div class="step-num">1</div>
+        <div class="step-text">
+          <strong>Chọn Ảnh & Video</strong>
+          <span>Từ Điện thoại hoặc Máy tính của cô</span>
+        </div>
+      </div>
+
+      <div class="guide-step">
+        <div class="step-num">2</div>
+        <div class="step-text">
+          <strong>Tạo Lời Bình & Phụ Đề</strong>
+          <span>Chọn mẫu có sẵn, gõ chữ hoặc thu âm giọng cô</span>
+        </div>
+      </div>
+
+      <div class="guide-step">
+        <div class="step-num">3</div>
+        <div class="step-text">
+          <strong>Xem Phim & Tải Về Máy</strong>
+          <span>Bấm 1 nút để lưu video gửi Zalo / Facebook</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Studio Grid -->
+  <main class="studio-container">
+    <!-- Left Column: Cinema Preview Screen & Export -->
+    <div class="player-card">
+      <div class="card-heading">
+        <h2>📺 Màn Hình Chiếu Phim Kỷ Niệm</h2>
+        <span style="font-size: 0.92rem; color: var(--text-sub); font-weight: 600;">
+          Chuẩn HD (1280 × 720)
+        </span>
+      </div>
+
+      <div class="canvas-wrapper">
+        <div id="recording-badge" class="recording-badge">
+          <span>🔴 ĐANG QUAY & XUẤT FILE VIDEO...</span>
+        </div>
+        <canvas id="movie-canvas" width="1280" height="720"></canvas>
+      </div>
+
+      <!-- Main Action Buttons -->
+      <div class="player-controls">
+        <button id="play-movie-btn" type="button" class="big-btn btn-play">
+          <span>▶️ Xem Thử Bộ Phim</span>
+        </button>
+
+        <button id="export-movie-btn" type="button" class="big-btn btn-export">
+          <span>💾 Xuất & Tải Phim Về Máy</span>
+        </button>
+      </div>
+
+      <!-- Download Ready Box -->
+      <div id="download-box" class="download-box">
+        <strong style="color: #065f46; font-size: 1.15rem;">
+          🎉 Bộ phim của cô Hoà đã quay xong!
+        </strong>
+        <p style="font-size: 0.95rem; color: #047857;">
+          Cô bấm vào nút bên dưới để lưu file Video về Điện thoại / Máy tính và gửi tặng bạn bè qua Zalo hoặc đăng Facebook nhé:
+        </p>
+        <a
+          id="download-video-link"
+          href="#"
+          download="Phim-Ky-Niem-Hoa-Dong.webm"
+          class="big-btn btn-export"
+          style="text-decoration: none;"
+        >
+          <span>⬇️ BẤM ĐỂ LƯU FILE VIDEO VỀ MÁY NGAY</span>
+        </a>
+      </div>
+
+      <!-- Overall Movie Settings -->
+      <div class="movie-settings">
+        <div class="field-box">
+          <label for="movie-title-input">🏷️ Tên Bộ Phim (Hiển thị góc trên màn hình)</label>
+          <input
+            type="text"
+            id="movie-title-input"
+            value="Hoà Đồng Cuộc Sống Tươi Đẹp"
+            placeholder="Nhập tên bộ phim kỷ niệm..."
+          />
+        </div>
+
+        <div class="setting-row">
+          <div class="field-box">
+            <label for="bg-music-select">🎶 Nhạc Nền Tự Động</label>
+            <select id="bg-music-select">
+              <option value="quehuong" selected>Nhạc Quê Hương Êm Dịu (Mặc định)</option>
+              <option value="muaxuan">Giai Điệu Mùa Xuân Tươi Vui</option>
+              <option value="kyniem">Khúc Nhạc Kỷ Niệm Sâu Lắng</option>
+              <option value="custom">📂 Tải nhạc MP3 từ máy của cô lên...</option>
+              <option value="none">🔇 Tắt nhạc nền</option>
+            </select>
+            <input type="file" id="bg-music-file-input" accept="audio/*" style="display: none;" />
+          </div>
+
+          <div class="field-box">
+            <label for="frame-style-select">🌸 Khung Viền & Hiệu Ứng</label>
+            <select id="frame-style-select">
+              <option value="hoadao" selected>Cánh Hoa Đào Rơi & Viền Hồng</option>
+              <option value="kinhdoanh">Ánh Sao Vàng & Khung Vàng Sang Trọng</option>
+              <option value="thanhlich">Khung Trắng Thanh Lịch</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="setting-row">
+          <div class="field-box">
+            <label for="subtitle-size-select">🔤 Cỡ Chữ Phụ Đề Trên Phim</label>
+            <select id="subtitle-size-select">
+              <option value="26">Cỡ Vừa (26px)</option>
+              <option value="30" selected>Cỡ To Rõ Dễ Đọc (30px - Khuyên dùng)</option>
+              <option value="36">Cỡ Rất To (36px)</option>
+            </select>
+          </div>
+
+          <div class="field-box">
+            <label for="subtitle-color-select">🎨 Màu Chữ Phụ Đề</label>
+            <select id="subtitle-color-select">
+              <option value="#fff3b0" selected>Vàng Nắng Ấm (Nổi bật nhất)</option>
+              <option value="#ffffff">Trắng Tinh Khôi</option>
+              <option value="#ffc2d1">Hồng Phấn Dịu Dàng</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column: Media Picker & Per-Slide Narration/Subtitle Editor -->
+    <div class="editor-column">
+      <!-- 1. Add Photos & Videos -->
+      <div class="panel-card">
+        <div class="card-heading">
+          <h2>📸 Bước 1: Chọn Ảnh & Video Từ Máy Tính / Điện Thoại</h2>
+        </div>
+
+        <div id="upload-zone" class="upload-zone">
+          <span class="upload-icon">➕🖼️🎥</span>
+          <h3>Bấm Vào Đây Để Chọn Ảnh Hoặc Video Của Cô</h3>
+          <p>
+            Có thể chọn 1 hoặc nhiều bức ảnh, video từ Điện thoại hoặc Máy tính cùng lúc
+          </p>
+          <input
+            type="file"
+            id="media-upload-input"
+            accept="image/*,video/*"
+            multiple
+            style="display: none;"
+          />
+        </div>
+
+        <div style="margin-top: 16px;">
+          <strong style="font-size: 1rem; color: var(--text-sub);">
+            🎞️ Danh sách các cảnh trong phim (Bấm vào từng ảnh để sửa lời bình):
+          </strong>
+          <div id="slides-strip" class="slides-strip"></div>
+        </div>
+      </div>
+
+      <!-- 2. Edit Subtitle & Voice Narration for Selected Slide -->
+      <div class="panel-card">
+        <div class="card-heading">
+          <h2>📝 Bước 2: Lời Bình & Phụ Đề Cho Từng Cảnh</h2>
+          <span
+            id="active-slide-label"
+            style="background: var(--bg-accent-soft); color: var(--primary); padding: 6px 14px; border-radius: 99px; font-weight: 700; font-size: 0.95rem;"
+          >
+            Đang chỉnh sửa: Cảnh số 1
+          </span>
+        </div>
+
+        <!-- Quick Sample Quotes -->
+        <div style="margin-bottom: 16px;">
+          <label style="font-weight: 700; font-size: 0.96rem; display: block;">
+            💡 Chọn nhanh lời bình mẫu giàu cảm xúc (Chỉ cần bấm 1 chạm):
+          </label>
+          <div class="preset-chips">
+            <button type="button" class="chip-btn" data-preset="dongnghiep">
+              👩‍🏫 Tình Đồng Nghiệp & Mái Trường
+            </button>
+            <button type="button" class="chip-btn" data-preset="duxuan">
+              🌸 Du Xuân & Khám Phá
+            </button>
+            <button type="button" class="chip-btn" data-preset="giadinh">
+              🏡 Gia Đình Yêu Thương
+            </button>
+            <button type="button" class="chip-btn" data-preset="cuocsong">
+              ☀️ Sống Vui Khoẻ & Hoà Đồng
+            </button>
+          </div>
+        </div>
+
+        <!-- Subtitle Textarea -->
+        <div class="field-box" style="margin-bottom: 16px;">
+          <label for="slide-caption">
+            ✍️ Nội dung chữ phụ đề & lời bình của cảnh này:
+          </label>
+          <textarea
+            id="slide-caption"
+            rows="3"
+            placeholder="Nhập lời bình hoặc bấm các nút bên dưới để nói trực tiếp..."
+          ></textarea>
+        </div>
+
+        <!-- Voice & Audio Controls -->
+        <label style="font-weight: 700; font-size: 0.96rem; display: block;">
+          🎙️ Công cụ Giọng Đọc & Thu Âm (Phục vụ cô Hoà thuận tiện nhất):
+        </label>
+
+        <div class="voice-tools-grid">
+          <button type="button" id="test-tts-btn" class="big-btn btn-secondary">
+            <span>🔊 Nghe Thử Máy Đọc Lời Bình</span>
+          </button>
+
+          <button type="button" id="dictate-btn" class="big-btn btn-secondary">
+            <span>🗣️ Nói Để Tự Ra Chữ Phụ Đề</span>
+          </button>
+
+          <button type="button" id="record-mic-btn" class="big-btn btn-voice">
+            <span>🎙️ Tự Thu Âm Giọng Cô Hoà</span>
+          </button>
+
+          <button type="button" id="upload-slide-audio-btn" class="big-btn btn-secondary">
+            <span>📂 Tải File Ghi Âm Có Sẵn Lên</span>
+          </button>
+          <input type="file" id="slide-audio-input" accept="audio/*" style="display: none;" />
+        </div>
+
+        <!-- Current Slide Voice Mode Indicator -->
+        <div class="audio-status-box">
+          <span id="slide-audio-status">
+            🔊 <strong>Chế độ mặc định:</strong> Máy tự động đọc thuyết minh Tiếng Việt
+          </span>
+          <button
+            type="button"
+            id="clear-slide-audio-btn"
+            class="chip-btn"
+            style="display: none;"
+          >
+            🔄 Đổi về máy tự đọc
+          </button>
+        </div>
+
+        <!-- Duration & Speed -->
+        <div class="setting-row" style="margin-top: 18px;">
+          <div class="field-box">
+            <label for="slide-duration">⏱️ Thời gian chiếu cảnh này (Giây)</label>
+            <input type="number" id="slide-duration" min="3" max="30" value="7" />
+          </div>
+
+          <div class="field-box">
+            <label for="voice-speed">🗣️ Tốc độ giọng đọc tự động</label>
+            <select id="voice-speed">
+              <option value="0.85">Chậm rãi, truyền cảm (0.85x)</option>
+              <option value="0.95" selected>Vừa phải, tự nhiên (0.95x)</option>
+              <option value="1.05">Nhanh vui tươi (1.05x)</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Toast Message -->
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="video-studio.js"></script>
+</body>
+</html>
